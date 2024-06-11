@@ -12,7 +12,7 @@ root.render(
       domain="dev-y3y54fv3nzorqoci.us.auth0.com"
       clientId="pijdAn7mrjdX4ecmvhL2M7S6ZQ8mZ4U4"
       authorizationParams={{
-        redirect_uri: window.location.origin
+        redirect_uri: "https://ArmandoAceves.github.io/CRM"
       }}
     >
       <App />
