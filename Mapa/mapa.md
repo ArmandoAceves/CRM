@@ -1,0 +1,21 @@
+# Implementación de un CRM en React
+  - 1. Configuración del Entorno
+    - 1.1. Instalación de Node.js y npm
+    - 1.2. Creación de la Aplicación en React
+      - 1.2.1. npx create-react-app crm
+  - Código del CRM
+    - Login
+      - LoginButton.js
+      - Login.css
+    - Logout
+      - LogoutButton.js
+      - Logout.css
+    - Profile
+      - Profile.js
+      - Profile.css
+    - Sidebar
+      - Sidebar1.js
+      - Sidebar.css
+    - Topbar
+      - Topbar.js
+      - Topbar.css

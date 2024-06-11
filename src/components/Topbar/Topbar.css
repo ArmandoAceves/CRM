@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Cambiado a un color de fondo más neutro */
+}
+
+/* Estilos para la barra superior (topbar) */
+.topbar {
+  background-color: #000000; /* Color de fondo del topbar */
+  padding: 10px 20px; /* Padding general del topbar */
+  display: flex; /* Utilizamos flexbox */
+  justify-content: space-between; /* Alineamos los elementos a ambos extremos */
+  align-items: center; /* Centramos verticalmente los elementos */
+  position: fixed; /* Fijamos la barra en la parte superior */
+  top: 0; /* La colocamos en la parte superior */
+  left: 0; /* La alineamos a la izquierda */
+  right: 0; /* La alineamos a la derecha */
+  z-index: 1000; /* Aseguramos que la topbar esté por encima de otros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Estilos para la imagen de perfil */
+.topbar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Hacemos la imagen circular */
+  margin-right: 10px; /* Añadimos un espacio a la derecha para separarla */
+}
+
+/* Estilos para el saludo */
+.saludo {
+  color: #fff; /* Color del texto del saludo */
+  font-size: 1rem; /* Tamaño del texto del saludo */
+  padding: 10px; /* Padding del saludo */
+  border-radius: 10px; /* Redondeamos las esquinas del saludo */
+  background-color: rgba(0, 0, 0, 0.3); /* Color de fondo del saludo */
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  margin-right: 850px; /* Añadimos un espacio adicional para separar el saludo de los botones */
+}
+
+/* Estilos para los botones */
+.topbar button {
+  width: auto; /* Ancho automático para adaptarse al contenido */
+  height: 40px;
+  font-size: 1rem;
+  background-color: #000000; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano para el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  margin-right: 10px; /* Añadimos un espacio a la derecha para separar los botones */
+}
+
+.topbar button:last-child {
+  margin-right: 0; /* Eliminamos el margen derecho del último botón */
+}
+
+.topbar button:hover {
+  background-color: #ff0000; /* Color de fondo del botón al pasar el ratón */
+}
+
+.topbar button:nth-child(2) {
+  margin-left: auto; /* Alineamos el botón de menú a la derecha */
+}

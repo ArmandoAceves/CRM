@@ -1,0 +1,139 @@
+/* Patrón de líneas diagonales */
+.barra {
+  background: linear-gradient(135deg, #2980b9, #3498db), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
+  color: #fff; /* Color del texto */
+  padding: 20px; /* Agregar padding para que se vea mejor */
+}
+
+/* Patrón de líneas diagonales para el fondo completo */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
+}
+
+/* Estilos para el logo */
+.barra .logo {
+  width: 100px; /* Ajustar el ancho del logo */
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%; /* Agregar borde redondo al logo */
+}
+
+/* Estilos para el nombre */
+.barra .nombre {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold; /* Agregar peso fuerte al nombre */
+}
+
+/* Estilos para los encabezados */
+.barra h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Agregar espacio entre el título y el contenido */
+}
+
+/* Estilos para la lista */
+.barra ul {
+  padding-left: 0;
+  list-style: none; /* Quitar bullets de la lista */
+}
+
+/* Estilos para los elementos de la lista */
+.barra ul li {
+  margin-bottom: 10px; /* Agregar espacio entre los items de la lista */
+}
+
+/* Estilos para los enlaces y divs dentro de la lista */
+.barra ul li a,
+.barra ul li div {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff; /* Color del texto */
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Estilos al hacer hover sobre los enlaces y divs */
+.barra ul li a:hover,
+.barra ul li div:hover {
+  background: rgba(255, 255, 255, 0.2); /* Cambiamos el fondo al hacer hover */
+}
+
+/* Estilos para los iconos */
+.barra ul li i {
+  margin-right: 10px;
+}
+
+/* Estilos para el botón del menú */
+.menu-button {
+  background-color: #fff; /* Color de fondo del botón */
+  color: #3498db; /* Color del texto del botón */
+  border: none;
+  border-radius: 5px; /* Agregar borde redondo al botón */
+  padding: 10px 15px; /* Ajustar el padding del botón */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilos al hacer hover sobre el botón del menú */
+.menu-button:hover {
+  background-color: #ecf0f1; /* Cambiamos el color de fondo al hacer hover */
+}
+
+/* Estilos para el botón de cerrar el menú */
+.close-button {
+  color: #fff; /* Color del texto */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #f00; /* Cambiamos el color al hacer hover */
+}
+
+/* Transiciones para slidedown y slideup */
+@keyframes slidedown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--content-height);
+  }
+}
+
+@keyframes slideup {
+  from {
+    height: var(--content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.slidedown {
+  animation: slidedown 0.3s forwards;
+}
+
+.slideup {
+  animation: slideup 0.3s forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Estilos adicionales para separar el ícono desplegable */
+.sidebar-item {
+  cursor: pointer;
+}
+
+.sidebar-item .chevron-icon {
+  margin-left: auto; /* Separar el ícono desplegable */
+}
+
+.sidebar-link {
+  cursor: default; /* Eliminar el icono de escritura */
+}
