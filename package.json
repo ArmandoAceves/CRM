@@ -27,7 +27,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "eslint:recommended",
+      "Fútbol Fino",
       "react-app/jest"
     ]
   },
