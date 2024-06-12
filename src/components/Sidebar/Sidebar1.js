@@ -40,7 +40,8 @@ const SidebarItem = ({ label, icon, children }) => {
 
 const SidebarLink = ({ label, icon }) => (
     <li>
-        <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full sidebar-link">
+        {/* Corrige la advertencia de a11y agregando un href válido o cambiando a un elemento diferente si es necesario */}
+        <a href="#!" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full sidebar-link">
             <i className={`pi ${icon} mr-2`}></i>
             <span className="font-medium">{label}</span>
             <Ripple />

@@ -1,11 +1,11 @@
-/* Patrón de líneas diagonales */
+/* Estilos para el contenedor principal */
 .barra {
   background: linear-gradient(135deg, #2980b9, #3498db), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
-  color: #fff; /* Color del texto */
-  padding: 20px; /* Agregar padding para que se vea mejor */
+  color: #fff;
+  padding: 20px;
 }
 
-/* Patrón de líneas diagonales para el fondo completo */
+/* Estilos generales del cuerpo */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -14,35 +14,35 @@ body {
 
 /* Estilos para el logo */
 .barra .logo {
-  width: 100px; /* Ajustar el ancho del logo */
+  width: 100px;
   height: auto;
   margin-right: 10px;
-  border-radius: 50%; /* Agregar borde redondo al logo */
+  border-radius: 50%;
 }
 
 /* Estilos para el nombre */
 .barra .nombre {
   font-family: 'Arial', sans-serif;
   font-size: 24px;
-  font-weight: bold; /* Agregar peso fuerte al nombre */
+  font-weight: bold;
 }
 
 /* Estilos para los encabezados */
 .barra h2 {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px; /* Agregar espacio entre el título y el contenido */
+  margin-bottom: 10px;
 }
 
 /* Estilos para la lista */
 .barra ul {
   padding-left: 0;
-  list-style: none; /* Quitar bullets de la lista */
+  list-style: none;
 }
 
 /* Estilos para los elementos de la lista */
 .barra ul li {
-  margin-bottom: 10px; /* Agregar espacio entre los items de la lista */
+  margin-bottom: 10px;
 }
 
 /* Estilos para los enlaces y divs dentro de la lista */
@@ -52,7 +52,7 @@ body {
   align-items: center;
   padding: 10px 15px;
   border-radius: 5px;
-  color: #fff; /* Color del texto */
+  color: #fff;
   text-decoration: none;
   transition: background 0.3s ease;
 }
@@ -60,7 +60,7 @@ body {
 /* Estilos al hacer hover sobre los enlaces y divs */
 .barra ul li a:hover,
 .barra ul li div:hover {
-  background: rgba(255, 255, 255, 0.2); /* Cambiamos el fondo al hacer hover */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Estilos para los iconos */
@@ -70,28 +70,28 @@ body {
 
 /* Estilos para el botón del menú */
 .menu-button {
-  background-color: #fff; /* Color de fondo del botón */
-  color: #3498db; /* Color del texto del botón */
+  background-color: #fff;
+  color: #3498db;
   border: none;
-  border-radius: 5px; /* Agregar borde redondo al botón */
-  padding: 10px 15px; /* Ajustar el padding del botón */
-  transition: background-color 0.3s ease; /* Transición suave */
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
 
 /* Estilos al hacer hover sobre el botón del menú */
 .menu-button:hover {
-  background-color: #ecf0f1; /* Cambiamos el color de fondo al hacer hover */
+  background-color: #ecf0f1;
 }
 
 /* Estilos para el botón de cerrar el menú */
 .close-button {
-  color: #fff; /* Color del texto */
+  color: #fff;
   font-size: 20px;
   cursor: pointer;
 }
 
 .close-button:hover {
-  color: #f00; /* Cambiamos el color al hacer hover */
+  color: #f00;
 }
 
 /* Transiciones para slidedown y slideup */
@@ -131,9 +131,9 @@ body {
 }
 
 .sidebar-item .chevron-icon {
-  margin-left: auto; /* Separar el ícono desplegable */
+  margin-left: auto;
 }
 
 .sidebar-link {
-  cursor: default; /* Eliminar el icono de escritura */
+  cursor: pointer;
 }

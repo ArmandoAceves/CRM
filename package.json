@@ -27,7 +27,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "crm",
+      "react-app",
       "react-app/jest"
     ]
   },
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-crm": "^1.0.1"
   }
 }
