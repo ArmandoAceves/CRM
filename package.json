@@ -27,7 +27,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "Fútbol Fino",
+      "crm",
       "react-app/jest"
     ]
   },
