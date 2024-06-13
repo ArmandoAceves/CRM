@@ -1,38 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
 import { Ripple } from 'primereact/ripple';
-import './Sidebar.css'; // Asegúrate de que este archivo contiene estilos correctos y responsivos
+import { StyleClass } from 'primereact/styleclass';
+import 'primeicons/primeicons.css';
+import './Sidebar.css';
 
-const SidebarItem = ({ label, icon, children }) => (
-    <li>
-        <div className="sidebar-item">
-            <div className="p-3 flex align-items-center justify-content-between text-600 cursor-pointer">
-                <span className="flex align-items-center">
-                    <i className={`pi ${icon} mr-2`}></i>
-                    <span className="font-medium">{label}</span>
-                </span>
-                <i className="pi pi-chevron-down ml-auto chevron-icon"></i>
-                <Ripple />
-            </div>
+const SidebarItem = ({ label, icon, children }) => {
+    const btnRef = useRef(null);
+
+    return (
+        <li>
+            <StyleClass
+                nodeRef={btnRef}
+                selector="@next"
+                enterClassName="hidden"
+                enterActiveClassName="slidedown"
+                leaveToClassName="hidden"
+                leaveActiveClassName="slideup"
+            >
+                <div
+                    ref={btnRef}
+                    className="p-ripple p-3 flex align-items-center justify-content-between text-600 cursor-pointer sidebar-item"
+                >
+                    <span className="flex align-items-center">
+                        <i className={`pi ${icon} mr-2`}></i>
+                        <span className="font-medium">{label}</span>
+                    </span>
+                    <i className="pi pi-chevron-down ml-auto chevron-icon"></i>
+                    <Ripple />
+                </div>
+            </StyleClass>
             <ul className="list-none p-0 m-0 hidden overflow-hidden transition-all transition-duration-400 transition-ease-in-out">
                 {children}
             </ul>
-        </div>
-    </li>
-);
+        </li>
+    );
+};
 
 const SidebarLink = ({ label, icon }) => (
     <li>
-        <a href="#!" className="sidebar-link p-ripple flex align-items-center p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+        <button className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full sidebar-link">
             <i className={`pi ${icon} mr-2`}></i>
             <span className="font-medium">{label}</span>
             <Ripple />
-        </a>
+        </button>
     </li>
 );
 
-const Sidebar1 = () => {
+export default function Sidebar1() {
     const [visible, setVisible] = useState(false);
 
     return (
@@ -73,6 +89,4 @@ const Sidebar1 = () => {
             <Button icon="pi pi-bars" onClick={() => setVisible(true)} className="menu-button" />
         </div>
     );
-};
-
-export default Sidebar1;
+}

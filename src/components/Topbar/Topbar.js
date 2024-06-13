@@ -10,12 +10,10 @@ const Topbar = () => {
 
   return (
     <div className="topbar">
-      <div className="profile-info"> {/* Contenedor para alinear la imagen de perfil y el saludo */}
-        <img src={user.picture} alt={user.name} />
-        <span className='saludo'>¡Hola, {user.name}!</span> {/* Mensaje de bienvenida personalizado */}
-      </div>
       <Sidebar1/>
-      <LogoutButton />
+      <LogoutButton/>
+      <span className='hello'>Bienvenido, {user.name}</span>
+      <img src={user.picture} alt={user.name} />
     </div>
   );
 };
