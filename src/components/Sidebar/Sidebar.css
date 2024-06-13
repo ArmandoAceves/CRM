@@ -64,8 +64,10 @@ body {
 }
 
 /* Estilos para los iconos */
-.barra ul li i {
+.barra ul li i.pi {
   margin-right: 10px;
+  background-color: transparent; /* Quitar el fondo blanco */
+  color: inherit; /* Mantener el color del texto predeterminado */
 }
 
 /* Estilos para el botón del menú */
