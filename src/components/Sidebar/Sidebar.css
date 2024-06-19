@@ -82,7 +82,7 @@ body {
 
 /* Estilos al hacer hover sobre el botón del menú */
 .menu-button:hover {
-  background-color: #ecf0f1; /* Cambiamos el color de fondo al hacer hover */
+  background-color: #33ff00; /* Cambiamos el color de fondo al hacer hover */
 }
 
 /* Estilos para el botón de cerrar el menú */
