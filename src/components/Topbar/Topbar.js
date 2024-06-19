@@ -15,13 +15,18 @@ const Topbar = () => {
   return (
     <div className="topbar">
       <Sidebar1 />
-      <img src={user.picture} alt={user.name} onClick={toggleDropdown} className="profile-picture" />
+      <div className="profile-section" onClick={toggleDropdown}>
+        <img src={user.picture} alt={user.name} className="profile-picture" />
+        <span className="notification-badge">3</span> {/* Example notification count */}
+      </div>
       {showDropdown && (
         <div className="dropdown-container">
           <div className="dropdown-content">
             <img src={user.picture} alt={user.name} className="imagen_usuario" />
-            <p>{user.email}</p>
-            <hr className="mb-3 mx-3 border-top-1 border-none surface-border" />
+            <p className="user-name">{user.name}</p>
+            <p className="user-email">{user.email}</p>
+            <hr className="dropdown-divider" />
+            <button className="dropdown-button">View Profile</button>
             <div className="icons-container">
               <i className="pi pi-comment" />
               <i className="pi pi-envelope" />

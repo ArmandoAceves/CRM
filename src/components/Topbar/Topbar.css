@@ -6,37 +6,69 @@ body {
 /* Estilos para la barra superior (topbar) */
 .topbar {
   position: relative;
-  background-color: #333; /* Color de fondo del topbar */
-  padding: 10px 20px; /* Padding general del topbar */
-  display: flex; /* Utilizamos flexbox */
-  justify-content: flex-end; /* Alineamos todos los elementos a la derecha */
-  align-items: center; /* Centramos verticalmente los elementos */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten a una nueva línea si es necesario */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-  z-index: 1000; /* Aseguramos que la topbar esté por encima de otros elementos */
-  gap: 10px; /* Espacio entre elementos */
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  gap: 10px;
+}
+
+/* Estilos para la sección del perfil */
+.profile-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* Estilos para la imagen de perfil */
 .profile-picture {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%; /* Hacemos la imagen circular */
-  cursor: pointer; /* Cursor de mano para la imagen */
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid #ecf0f1;
 }
 
+/* Estilos para la notificación */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+/* Estilos para el contenedor del dropdown */
 .dropdown-container {
   position: absolute;
-  top: 50px; /* ajusta la posición según sea necesario */
-  right: 20px; /* ajusta la posición según sea necesario */
-  z-index: 1; /* para que el dropdown esté por encima del topbar */
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  top: 50px;
+  right: 20px;
+  z-index: 1;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Animación para el dropdown */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para el contenido del dropdown */
 .dropdown-content {
   padding: 10px;
   display: flex;
@@ -45,10 +77,44 @@ body {
 }
 
 .imagen_usuario {
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   margin: 0.5rem;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.user-email {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 5px 0;
+}
+
+.dropdown-divider {
+  width: 80%;
+  border: 1px solid #bdc3c7;
+  margin: 10px 0;
+}
+
+.dropdown-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-button:hover {
+  background-color: #2980b9;
 }
 
 .icons-container {
@@ -57,20 +123,22 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  width: 100%;
 }
 
 .icons-container i {
   font-size: 1.5rem;
   margin: 0 10px;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .icons-container i:hover {
-  color: #666;
+  color: #3498db;
 }
 
 .topbar {
-  position: relative; /* para que el dropdown se posicione correctamente */
+  position: relative;
 }
 
 /* Estilos para los botones */
@@ -78,59 +146,59 @@ body {
   width: 4rem;
   height: 2rem;
   font-size: 0.8rem;
-  background-color: #555; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Sin bordes */
-  border-radius: 15px; /* Bordes redondeados */
-  cursor: pointer; /* Cursor de mano para el botón */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .topbar button:hover {
-  background-color: #666; /* Color de fondo del botón al pasar el ratón */
+  background-color: #666;
 }
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
   .topbar {
-    justify-content: center; /* Alineamos todos los elementos a la derecha */
-    padding: 5px; /* Reducimos el padding general del topbar */
-    gap: 5px; /* Espacio entre elementos */
+    justify-content: center;
+    padding: 5px;
+    gap: 5px;
   }
 
   button {
-    width: 4rem; /* Reducimos el tamaño del botón */
-    height: 2.5rem; /* Reducimos el tamaño del botón */
-    font-size: 0.875rem; /* Reducimos el tamaño del texto */
+    width: 4rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
   }
 }
 
 /* Media query para pantallas medianas */
 @media (min-width: 601px) and (max-width: 900px) {
   .topbar {
-    justify-content: center; /* Alineamos todos los elementos a la derecha */
-    padding: 8px; /* Ajustamos el padding general del topbar */
-    gap: 8px; /* Espacio entre elementos */
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
   }
 
   button {
-    width: 4.5rem; /* Ajustamos el tamaño del botón */
-    height: 2.75rem; /* Ajustamos el tamaño del botón */
-    font-size: 0.9375rem; /* Ajustamos el tamaño del texto */
+    width: 4.5rem;
+    height: 2.75rem;
+    font-size: 0.9375rem;
   }
 }
 
 /* Media query para pantallas grandes */
 @media (min-width: 901px) {
   .topbar {
-    justify-content: flex-end; /* Alineamos todos los elementos a la derecha */
-    padding: 10px 20px; /* Mantenemos el padding general del topbar */
-    gap: 10px; /* Espacio entre elementos */
+    justify-content: flex-end;
+    padding: 10px 20px;
+    gap: 10px;
   }
 
   button {
-    width: 5rem; /* Mantenemos el tamaño del botón */
-    height: 3rem; /* Mantenemos el tamaño del botón */
-    font-size: 1rem; /* Mantenemos el tamaño del texto */
+    width: 5rem;
+    height: 3rem;
+    font-size: 1rem;
   }
 }
