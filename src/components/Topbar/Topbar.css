@@ -137,11 +137,7 @@ body {
   color: #3498db;
 }
 
-.topbar {
-  position: relative;
-}
-
-/* Estilos para los botones */
+/* Estilos para los botones en la barra superior */
 .topbar button {
   width: 4rem;
   height: 2rem;
