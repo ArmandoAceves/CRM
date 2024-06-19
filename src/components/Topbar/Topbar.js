@@ -26,7 +26,7 @@ const Topbar = () => {
             <p className="user-name">{user.name}</p>
             <p className="user-email">{user.email}</p>
             <hr className="dropdown-divider" />
-            <button className="dropdown-button">View Profile</button>
+            <button className="dropdown-button" onClick={() => alert('Redirigiendo al perfil...')}>View Profile</button>
             <div className="icons-container">
               <i className="pi pi-comment" />
               <i className="pi pi-envelope" />
