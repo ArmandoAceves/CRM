@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import SidebarLat from '../Sidebar/SidebarLat';
+import SidebarLat from '../Sidebar/SidebarLat'; // Asegúrate de que la ruta sea correcta
 import { LogoutButton } from '../Logout/Logout';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './Topbar.css';
@@ -41,3 +41,4 @@ const Topbar = () => {
 };
 
 export default Topbar;
+
