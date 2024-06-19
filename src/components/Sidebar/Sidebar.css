@@ -1,6 +1,8 @@
 /* Patrón de líneas diagonales */
 .barra {
-  background: linear-gradient(135deg, #2980b9, #3498db), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
+  background: linear-gradient(135deg, #2980b9, #3498db), 
+              repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), 
+              rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
   color: #fff; /* Color del texto */
   padding: 20px; /* Agregar padding para que se vea mejor */
 }
@@ -9,7 +11,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #2c3e50, #34495e), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
+  background: linear-gradient(135deg, #2c3e50, #34495e), 
+              repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), 
+              rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
 }
 
 /* Estilos para el logo */
@@ -55,6 +59,7 @@ body {
   color: #fff; /* Color del texto */
   text-decoration: none;
   transition: background 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
 }
 
 /* Estilos al hacer hover sobre los enlaces y divs */
