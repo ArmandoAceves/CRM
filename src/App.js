@@ -3,9 +3,9 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './components/Login/Login';
 import { Route, Routes } from 'react-router-dom';
 import Topbar from './components/Topbar/Topbar';
-import Dashboard from './pages/Dashboard/Dashboard';
-import Clientes from './pages/Clientes/Clientes';
-import Factura from './pages/Factura/Factura';
+import Dashboard from './Dashboard/Dashboard';
+import Factura from './Pages/Factura/Factura';
+import Clientes from './Pages/Clientes/Clientes';
 import './App.css';
 
 function App() {

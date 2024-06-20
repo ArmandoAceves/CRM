@@ -1,0 +1,60 @@
+/* Dashboard.css */
+.titulo{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+
+}
+
+.graficos {
+    padding: 1rem;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .tarjetas {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre las tarjetas */
+    justify-content: space-between; /* Distribuir el espacio entre las tarjetas */
+  }
+  
+  .tarjetas .p-card {
+    flex: 1 1 calc(25% - 1rem); /* Ajustar el tamaño de las tarjetas para que se distribuyan en 4 columnas */
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Desenfoque */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 1rem;
+    color: #fff; /* Color del texto blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .titulo_card{
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+  }
+  .dato{
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    padding-top: 0.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .tarjetas .p-card {
+      flex: 1 1 calc(50% - 1rem); /* Ajustar a 2 columnas en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tarjetas .p-card {
+      flex: 1 1 100%; /* Ajustar a 1 columna en pantallas pequeñas */
+    }
+  }
