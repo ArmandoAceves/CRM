@@ -1,22 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
-
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Auth0Provider
-      domain="dev-y3y54fv3nzorqoci.us.auth0.com"
-      clientId="pijdAn7mrjdX4ecmvhL2M7S6ZQ8mZ4U4"
+  <React.StrictMode>
+    <Auth0Provider
+      domain="dev-i1t5ykium30c0wfz.us.auth0.com"
+      clientId="ssbrNNnU0snnlL2hVbSyyeVdAqZD9HcH"
       authorizationParams={{
         redirect_uri: "https://ArmandoAceves.github.io/CRM"
       }}
-    >
-      <App />
-    </Auth0Provider>,
+      >
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Auth0Provider>
+    </React.StrictMode>
   );
-
-reportWebVitals();
+  
+  reportWebVitals();
