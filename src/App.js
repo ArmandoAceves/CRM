@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { LoginButton } from './components/Login/Login';
+import LoginButton from './components/Login/Login';
 import { Route, Routes } from 'react-router-dom';
 import Topbar from './components/Topbar/Topbar';
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -10,8 +10,8 @@ import './App.css';
 
 function App() {
   const { isAuthenticated } = useAuth0();
-  console.log('Is authenticated:', isAuthenticated); // <--- Agrega esta línea
-  console.log('Dashboard importado:', Dashboard); // <--- Agrega esta línea
+  console.log('Is authenticated:', isAuthenticated); 
+  console.log('Dashboard importado:', Dashboard); 
   
   return (
     <div className="App">
