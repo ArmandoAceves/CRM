@@ -13,7 +13,7 @@ root.render(
       domain="dev-i1t5ykium30c0wfz.us.auth0.com"
       clientId="ssbrNNnU0snnlL2hVbSyyeVdAqZD9HcH"
       authorizationParams={{
-        redirect_uri: "https://ArmandoAceves.github.io/CRM"
+        redirect_uri: "https://armandoaceves.github.io/CRM/"
       }}
       >
         <BrowserRouter>

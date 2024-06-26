@@ -8,7 +8,7 @@ export const LogoutButton = () => {
 
     const handleLogout = () => {
         setIsLoading(true);
-        logout({ returnTo: "https://ArmandoAceves.github.io/CRM" });
+        logout({ returnTo: "https://armandoaceves.github.io/CRM/" });
     };
 
     return (
